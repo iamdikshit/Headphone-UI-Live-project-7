@@ -1,4 +1,4 @@
-# Web Development Challenge Day 1
+# Day 7 Live project-7
 
 ![badge](https://img.shields.io/badge/WebDev-Day1-orange)
 
