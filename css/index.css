@@ -50,7 +50,7 @@ nav img:last-child {
 /* Inteo section */
 .intro-section {
   display: grid;
-  grid-template-rows: 1fr;
+
   grid-template-columns: 2fr 1fr;
   gap: 1rem;
 }
@@ -223,4 +223,98 @@ nav img:last-child {
   margin-top: 5rem;
   margin-right: 0;
   width: 15rem;
+}
+
+/* rem and em do not depend on html font-size in
+    media queries!instead, 1rem = 1em = 16px
+*/
+
+/* ************************ */
+/* Below 1334px (smaller desktops) */
+/* *********************** */
+
+/*  1334 / 16 = 84 */
+@media (max-width: 84em) {
+  .intro-section {
+    max-width: 120rem;
+  }
+}
+
+/* ************************ */
+/* Below 1200px (Landscape tablets) */
+/* *********************** */
+
+@media (max-width: 75em) {
+  html {
+    /* 9px / 16px */
+    font-size: 56.25%;
+  }
+}
+
+/**************************/
+/* BELOW 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  html {
+    /* 9px / 16px */
+    font-size: 50%;
+  }
+  .left-section h3 img {
+    right: 44rem;
+  }
+
+  .intro-section {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+  .nav-items {
+    display: none;
+  }
+  .headphone-div img:first-child {
+    left: 20rem;
+  }
+  .headphone-div::before {
+    left: 24rem;
+  }
+  .discount-content {
+    left: 26rem;
+  }
+}
+
+/**************************/
+/* BELOW 704px (Smaller tablets) */
+/**************************/
+/* 704px / 16 == 44 */
+@media (max-width: 44em) {
+  .headphone-div img:first-child {
+    left: 16rem;
+  }
+  .headphone-div::before {
+    left: 16rem;
+  }
+  .discount-content {
+    left: 18rem;
+  }
+}
+
+/**************************/
+/* BELOW 544px (Phones) */
+/**************************/
+
+/* 544px / 16px */
+@media (max-width: 34em) {
+  .headphone-div img:first-child {
+    left: 10rem;
+  }
+  .headphone-div::before {
+    left: 10rem;
+  }
+  .discount-content {
+    left: 12rem;
+  }
+  .left-section h3 img {
+    right: 24rem;
+  }
 }
